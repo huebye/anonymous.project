@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+#makethisvanish {
+  display: block;
+  position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  opacity: 1;
+  z-index:1000;
+  margin: 0 auto;
+  transition: opacity .2s linear;
+}
+
+#makethisvanish > img {
+  width: 100%;
+  height: auto;
+}
+
+#makethisvanish > h1 {
+  font-size: 100px;
+  position: relative;
+  left: 600px;
+  bottom: 230px;
+}
+
+body {
+  min-width: 100vW;
+  min-height: 100vH;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.logo_img {
+  display: block;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+}
+
+.logo_img > h1 {
+  bottom: 100px;
+  font-size: 45px;
+  position: relative;
+  left: 100px;
+  bottom: 50px;
+}
+
+#logo_img {
+  width: 300px;
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  display: grid;
+  min-height: 100vH;
+  grid-template-columns: 30% 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+  overflow: hidden;
+  background-color: inherit;
+}
+
+.grid-left {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 350px;
+  background-color: inherit;
+  overflow: auto;
+}
+
+.grid-left > a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.grid-right {
+  width: 100%;
+  font-size: 22px;
+  text-align: left;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#image_slide {
+display: grid;
+width: auto;
+max-height: 100vH;
+overflow: hidden;
+align-content: center;
+margin: 0 auto;
+padding: 10px;
+padding-left: 150px;
+padding-top: 120px;
+padding-right: 100px;
+padding-bottom: 400px;
+}
+
+#image_slide > img {
+  display: grid;
+}
+
+[data-component="slideshow"] .slide {
+	display: none;
+}
+
+[data-component="slideshow"] .slide.active {
+  width: 100%;
+	display: grid;
+}
+
+#about_text {
+  display: grid;
+  overflow: scroll;
+  width: 75%;
+  height: auto;
+  font-size: 25px;
+  padding: 0;
+  padding-left: 150px;
+  padding-top: 120px;
+  padding-right: 100px;
+  padding-bottom: 400px;
+}
+
+#about_text > p {
+  font-size: 20px;
+}
+
+
+#artList {
+  display: grid;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  overflow: scroll;
+  padding: 10px;
+  padding-left: 150px;
+  padding-top: 120px;
+  padding-right: 100px;
+  padding-bottom: 400px;
+  scroll-behavior: smooth;
+}
+
+#artList > li {
+  font-size: 18px;
+}
+
+.artistCollection {
+  display: none;
+  margin-top: 100px;
+  width: 100%;
+  position: fixed;
+  top:0;
+  width: 100vW;
+  height: 100vH;
+  background-color: black;
+  overflow: auto;
+}
+
+.artistCollection > p {
+  z-index: 4;
+  font-size: 50px;
+  color: white;
+}
+
+.artistCollection > img {
+  display: block;
+  width: 150px;
+}

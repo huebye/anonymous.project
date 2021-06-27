@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>ANONYMOUS COLLECTION</title>
+    <script>
+      window.onload = function() {
+        document.getElementById('makethisvanish');
+        window.setTimeout(vanishLogo,1000);
+      };
+
+      function vanishLogo() {
+      document.getElementById('makethisvanish').style.opacity = "0";
+      document.getElementById('makethisvanish').style.zIndex = "-1";
+      document.getElementById('makethisvanish').style.display = "none";
+        
+      };
+    </script>
+  </head>
+  <body>
+    <div id="makethisvanish">
+      <img src="./img/logo.svg" alt="">
+      <h1>Collection</h1>
+    </div>
+
+    <div class="logo_img">
+      <a href="./index.html"><img id="logo_img" src="./img/logo.svg" alt="anonymous logo image"></a>
+      <h1>Collection</h1>
+    </div>
+
+    <div class="container">
+      <div class="grid-left">
+        <a href="./html/artists.html">Artists</a><br>
+        <a href="./html/about.html">About</a>
+      </div>
+      <div class="grid-right">
+        <div id="image_slide" data-component="slideshow">
+          <div role="list">
+            <div class="slide">
+              <img src="https://picsum.photos/500/600?random=2" alt="">
+            </div>
+            <div class="slide">
+              <img src="https://picsum.photos/500/400?random=2" alt="">
+            </div>
+            <div class="slide">
+              <img src="https://picsum.photos/400/600?random=2" alt="">
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="./js/slideshow.js"></script>
+  </body>
+</html>
