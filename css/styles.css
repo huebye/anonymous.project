@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -30,21 +32,20 @@
 }
 
 body {
-  min-width: 100vW;
-  min-height: 100vH;
+  width: 100vW;
+  height: 100vH;
   background: black;
   color: white;
   overflow: hidden;
 }
 
 .logo_img {
-  display: block;
   z-index: 3;
   position: fixed;
   top: 0;
   left:0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: black;
 }
 
@@ -69,7 +70,6 @@ body {
   margin: 0 auto;
   text-align: center;
   margin-top: 100px;
-  overflow: hidden;
   background-color: inherit;
 }
 
@@ -90,14 +90,18 @@ body {
   font-size: 24px;
   padding: 0;
   margin-bottom: 10px;
+  overflow: hidden;
 }
+
 
 .grid-right {
   width: 100%;
+  height: auto;
   font-size: 22px;
   text-align: left;
   margin: 0 auto;
   overflow: auto;
+  color: white;
 }
 
 li {
@@ -106,7 +110,7 @@ li {
 }
 
 #image_slide {
-display: grid;
+display: block;
 width: auto;
 max-height: 100vH;
 overflow: hidden;
@@ -151,21 +155,30 @@ padding-bottom: 400px;
 
 
 #artList {
-  display: grid;
+  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 0;
-  overflow: scroll;
+  overflow: auto;
   padding: 10px;
   padding-left: 150px;
   padding-top: 120px;
   padding-right: 100px;
-  padding-bottom: 400px;
+  margin-bottom: 500px;
   scroll-behavior: smooth;
 }
 
 #artList > li {
-  font-size: 18px;
+  font-size: 22px;
+}
+
+#artList > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+#artList > li > a:hover {
+  letter-spacing: 5px;
 }
 
 .artistCollection {
@@ -178,15 +191,34 @@ padding-bottom: 400px;
   height: 100vH;
   background-color: black;
   overflow: auto;
+  padding-left: 150px;
+  padding-bottom: 200px;
 }
 
 .artistCollection > p {
   z-index: 4;
-  font-size: 50px;
+  font-size: 17px;
   color: white;
 }
 
 .artistCollection > img {
   display: block;
-  width: 150px;
+  width: auto;
+  margin: 20px;
+}
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: 15% 85%;
+  }
+  #makethisvanish > h1 {
+    font-size: 80px;
+    position: relative;
+    left: 250px;
+    bottom: 130px;
+  }
 }
